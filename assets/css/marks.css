@@ -1,0 +1,247 @@
+
+    .sub {
+        margin: 8px;
+        padding: 5px;
+    }
+
+    /* 
+        li {
+            list-style: none;
+            margin: 20px;
+            margin-right: 40px;
+            background: rgb(246, 248, 149);
+            padding: 10px;
+            padding-left: 30px;
+            border: 1px solid;
+        } */
+
+    .header {
+        text-align: center;
+
+    }
+
+    .header h3 {
+        margin-top: 30px;
+
+    }
+
+    /* .userDetailBlock {
+            background-color: aliceblue;
+            border: 1px solid saddlebrown;
+            width: 700px;
+            margin: 10px auto;
+        }
+
+        .userDetailBlock div:first-child {
+            display: inline-block;
+            width: 120px;
+        }
+
+        .userDetailBlock div:nth-child(2) {
+            display: inline-block;
+            width: 75%;
+        }
+
+        .marksContainer input[type="text"] {
+            display: inline-block;
+            width: 60px;
+            margin-right: 10px;
+        }
+
+        .submitBtn {
+            text-align: center;
+        }
+
+        input[type="button"] {
+            width: 140px;
+            height: 30px;
+        } */
+
+
+    /* progress card result section css */
+    .resultContainer {
+        display: none;
+        font-family: sans-serif;
+        padding: 20px 20px;
+        width: 74%;
+        margin: 10px auto;
+        box-shadow: 0px 0px 7px 0px;
+    }
+
+    .s_logo {
+        width: 120px;
+        margin-bottom: -30px;
+    }
+
+    .detailsContainer {
+        padding: 5px 50px 10px;
+    }
+
+    .detailsContainer div {
+        display: inline-block;
+        width: 45%;
+        margin: auto 15px;
+    }
+
+    .emptyLine {
+        /* font-weight: bold; */
+        width: 60%;
+        padding-left: 5%;
+        margin-left: 2%;
+        display: inline-block;
+        border-bottom: 1px solid black;
+    }
+
+    .labels {
+        background-color: white;
+        border-bottom: 1px solid grey;
+        border-top: 1px solid grey;
+    }
+
+    .col {
+        padding: 2px;
+        margin: 2px;
+        display: inline-block;
+        text-align: center;
+
+    }
+
+    .col1 {
+        width: 40%;
+    }
+
+    .col2 {
+        width: 15%;
+    }
+
+    .col3 {
+        width: 20%;
+    }
+
+    .col4 {
+        width: 18%;
+    }
+
+    .marksCont>div:last-child {
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        background-color: white;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .grade{
+    margin-left: -50px;    
+    }
+    .grade h3 {
+        display: inline-block;
+        width: 32%;
+        margin-top: 40px;
+        /* margin-left: -20px; */
+        text-align: center;
+    }
+
+    .sign {
+        clear: both;
+        border-top: 1px solid;
+        padding-top: 10px;
+        margin: 80px 3% 50px 3%;
+        display: inline-block;
+        width: 26%;
+        text-align: center;
+    }
+
+    @media print {
+        .resultContainer {
+            /* display: none; */
+            font-family: sans-serif;
+            /* padding: 0px 20px; */
+            width: 100%;
+            /* margin: 10px 5px; */
+            box-shadow: none;
+            position: absolute;
+            top: 150px;
+        }
+
+        .s_logo {
+            display: none;
+        }
+
+        .header h3 {
+            display: none;
+        }
+
+
+        .detailsContainer div {
+            /* display: inline-block; */
+            width: 100%;
+            /* margin: auto 15px; */
+        }
+        .detailsContainer p{
+            margin: 7px;
+        }
+        .emptyLine{
+            border-bottom:none;
+        }
+
+        /* .detailsContainer :nth-child(2) {
+            width: 300px;
+            float: left;
+            position: relative;
+            bottom: 15px;
+        } */
+
+        /* .labels {
+            background-color: white;
+            border-bottom: 1px solid grey;
+        } */
+
+        /* .col {
+            padding: 2px;
+            margin: 2px;
+            display: inline-block;
+            text-align: center;
+        } */
+
+        /* .col1 {
+            width: 40%;
+        }
+
+        .col2 {
+            width: 15%;
+        }
+
+        .col3 {
+            width: 20%;
+        }
+
+        .col4 {
+            width: 18%;
+        } */
+
+        /* .marksCont>div:last-child {
+            border-top: 2px solid grey;
+            background-color: white;
+            font-weight: bold;
+            margin-top: 10px;
+        } */
+
+        /* .grade h3 {
+            display: inline-block;
+            width: 42%;
+            margin: 20px auto;
+            text-align: center;
+        } */
+
+        /* .sign {
+            clear: both;
+            border-top: 1px solid;
+            padding-top: 10px;
+            margin: 50px 3%;
+            display: inline-block;
+            width: 26%;
+            text-align: center;
+        } */
+    }
+
+ 

@@ -1,0 +1,99 @@
+body {
+    background-color: rgba(233, 245, 249, 0.754);
+}
+
+.navbar {
+    background-color: #c3f5ff;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.nav-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.title-content {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    /* top: 100px; */
+}
+
+/* .backgoungImg{
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 80%;
+} */
+.title-item {
+    width: 100%;
+    height: 100%;
+    top: 25px;
+    position: absolute;
+    background-color: rgba(198, 240, 255, 0.308);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.title-heading {
+    position: absolute;
+    color: rgb(8, 18, 125);
+    left: 350px;
+    top: 80px;
+}
+
+.title-item h3 {
+    font-size: 17px;
+}
+
+.title-item h1,
+.title-item h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.title-image {
+    top: 80px;
+    left: 200px;
+    position: absolute;
+}
+
+.marketing {
+    position: relative;
+    top: 380px;
+
+}
+
+/* FOOTER */
+
+.footer__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.footer__item {
+    margin-right: 4rem;
+}
+
+.footer__link {
+font-size: 1.2rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.footer__copyright {
+
+    color: inherit;
+    text-align: center;
+}
+
+/* .rowItem{
+position: absolute;
+bottom: 0px;
+left: 150px;
+
+} */

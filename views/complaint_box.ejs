@@ -1,0 +1,49 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/all-user"><i class="fas fa-angle-double-left"></i> All Students</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Complaint Box</h2>
+            </div>
+
+            <form method="POST" id="update_user">
+                <div class="new_user">
+                    <div class="form-group">
+                        <label for="name" class="text-color">Name</label>
+                        <input type="hidden" name="id" value="<%= user._id %>">
+                        <input type="text" name="name" value="<%= user.name %>" placeholder="Enter here" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Roll" class="text-color">Roll No</label>
+                        <input type="text" name="roll" value="<%= user.roll %>" placeholder="Enter here" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Enroll" class="text-color">Enroll No</label>
+                        <input type="text" name="enroll" value="<%= user.enroll %>" placeholder="Enter here" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Mobile" class="text-color">Complaint Details</label>
+                        <textarea name="complaint" cols="50" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Mobile" class="text-color">Desire Outcome</label>
+                        <textarea name="outcome" cols="50" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

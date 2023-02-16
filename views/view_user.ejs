@@ -1,0 +1,121 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/all-user"><i class="fas fa-angle-double-left"></i> All Students</a>
+                </div>
+                <div class="button">
+                    <button onclick="window.print()">print</button>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <!-- <h2 class="text-dark">view User</h2>
+            <span class="text-light">Use the below form to Update an account</span> -->
+            </div>
+
+            <!-- add user form -->
+            <!-- form handling -->
+            <form method="POST" id="view_user">
+                <div class="sName">
+                    <%= user.course %> Student
+                </div>
+                <div class="userProfile">
+
+                    <div class="nameAndEmail">
+                        <ul>
+                            <li class="">
+                                <div class=""><i class="fas fa-user"></i> Name: </div>
+                                <div>
+                                    <%= user.name %>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class=""><i class="fas fa-phone"></i> Phone: </div>
+                                <div>
+                                    <%= user.mobile %>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class=""><i class="fas fa-envelope"></i> Email: </div>
+                                <div>
+                                    <%= user.email %>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class=""> Date Of Birth: </div>
+                                <div>
+                                    <%= user.dob %>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="">Gender: </div>
+                                <div>
+                                    <%= user.gender %>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sDetails">
+                        <ul>
+                            <li class="">
+                                <div class="">Roll No: </div>
+                                <div>
+                                    <%= user.roll %>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="">Enroll No: </div>
+                                <div>
+                                    <%= user.enroll %>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="">Category: </div>
+                                <div>
+                                    <%= user.category %>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="">Address: </div>
+                                <div>
+                                    <%= user.address %>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="anotherPage">
+                    <div class="ComplaintDetails">
+
+                        <div class="">
+                            <div class="">Complaint Details: </div>
+                            <div>
+                                <%= user.complaint %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ComplaintDetails">
+                        <div class="">
+                            <div class="">Desire Outcome: </div>
+                            <div>
+                                <%= user.outcome %>
+                            </div>
+                        </div>
+                        </ul>
+                    </div>
+</div>
+
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <!-- /Main Site -->
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

@@ -1,0 +1,235 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/student-marks"><i class="fas fa-angle-double-left"></i> Back</a>
+                </div>
+
+            </div>
+
+            <form method="POST" id="update_user" class="userDetailBlock">
+                <div class="new_user">
+                    <div class="form-group">
+                        <label for="name" class="text-color" id="name">Name</label>
+                        <input type="hidden" name="id" value="<%= user._id %>">
+                        <input type="text" name="name" value="<%= user.name %>" placeholder="Enter here" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Roll" class="text-color">Roll No</label>
+                        <input type="text" name="roll" value="<%= user.roll %>" placeholder="Enter here" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Enroll" class="text-color">Enroll No</label>
+                        <input type="text" name="enroll" value="<%= user.enroll %>" placeholder="Enter here" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Term" class="text-color">Term</label>
+                        <select name="term" class="courses" id="sClass">
+                            <option>
+                                <%= user.term %>
+                            </option>
+                            <option>1 Semester</option>
+                            <option>2 Semester</option>
+                            <option>3 Semester</option>
+                            <option>4 Semester</option>
+                            <option>5 Semester</option>
+                            <option>6 Semester</option>
+                        </select>
+                    </div>
+
+                    <label for="Marks" class="text-color">Marks</label>
+                    <div class="marksContainer">
+                        <input type="text" name="hindi" class="sub" id="m1" value="<%= user.hindi %>"
+                            placeholder="Math">
+                        <input type="text" name="english" class="sub" id="m2" value="<%= user.english %>"
+                            placeholder="Science">
+                        <input type="text" name="maths" class="sub" id="m3" value="<%= user.maths %>"
+                            placeholder="English">
+                        <input type="text" name="science" class="sub" id="m4" value="<%= user.science %>"
+                            placeholder="Social Studies">
+                        <input type="text" name="bio" class="sub" id="m5" value="<%= user.bio %>"
+                            placeholder="Computer">
+
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="sub_btn" class="btn text-dark update">Generate</button>
+                    </div>
+                    <!-- <div class="submitBtn">
+                        <input id="sub_btn" type="button" value="Generate Report">
+                    </div> -->
+                </div>
+            </form>
+
+        </div>
+        <div class="resultContainer">
+            <div class="button">
+                <button onclick="window.print()">print</button>
+            </div>
+            <div class="resultBlock">
+                <div class="header">
+                    <img src="img/logo.png" class="s_logo" alt="school_logo">
+                    <!-- <h3>Progress Card</h3> -->
+                    <h3>Guru Ghasidas Vishwavidyalaya, Bilaspur
+                    </h3>
+                </div>
+                <hr>
+                <div class="detailsContainer">
+                    <div>
+                        <p>Name: <span class="emptyLine" id="s_name">
+                                <%= user.name %>
+                            </span></p>
+                        <p>Father Name: <span class="emptyLine">
+                                <%= user.fname %>
+                            </span></p>
+                        <p>Mother Name: <span class="emptyLine">
+                                <%= user.mname %>
+                            </span></p>
+                        <p>Gender: <span class="emptyLine">
+                                <%= user.gender %>
+                            </span></p>
+                        <p>Date Of Birth: <span class="emptyLine">
+                                <%= user.dob %>
+                            </span></p>
+                    </div>
+                    <div>
+                        <p>Roll: <span class="emptyLine">
+                                <%= user.roll %>
+                            </span></p>
+                        <p>Enroll: <span class="emptyLine">
+                                <%= user.enroll %>
+                            </span></p>
+                        <p>Term: <span class="emptyLine" id="s_class">
+                                <%= user.term %>
+                            </span></p>
+                    </div>
+                </div>
+                <div class="marksCont">
+                    <div class="labels">
+                        <div class="col col1">Subject</div>
+                        <div class="col col2">Full Marks</div>
+                        <div class="col col3">Marks Scored</div>
+                    </div>
+                    <div>
+                        <div class="col col1">Math </div>
+                        <div class="col col2">100</div>
+                        <div class="col col3" id="marks1"></div>
+                    </div>
+
+                    <div>
+                        <div class="col col1">English </div>
+                        <div class="col col2">100</div>
+                        <div class="col col3" id="marks2"></div>
+                    </div>
+                    <div>
+                        <div class="col col1">Social Studies </div>
+                        <div class="col col2">100</div>
+                        <div class="col col3" id="marks3"></div>
+                    </div>
+                    <div>
+                        <div class="col col1">Science </div>
+                        <div class="col col2">100</div>
+                        <div class="col col3" id="marks4"></div>
+                    </div>
+                    <div>
+                        <div class="col col1">Computer Knowledge </div>
+                        <div class="col col2">100</div>
+                        <div class="col col3" id="marks5"></div>
+                    </div>
+                    <div>
+                        <div class="col col1">Total </div>
+                        <div class="col col2">500</div>
+                        <div class="col col3" id="s_total"></div>
+                        <!-- <input type="text" name="total" class="sub" id="s_total" value="s_total" placeholder="Computer"> -->
+                    </div>
+                </div>
+            </div>
+            <div class="grade ">
+                <h3>Grade: <span id="s_grade"></span></h3>
+                <h3>Percentage: <span id="s_percentage"></span>%</h3>
+                <h3>Result: <span id="s_result"></span></h3>
+            </div>
+
+            <div>
+                <div class="parents sign">Parents Signature</div>
+                <div class="student sign">Student Signature</div>
+                <div class="teacher sign">Teacher Signature</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector("#sub_btn").addEventListener('click', () => {
+
+            var studentDetails = {
+                generateReport() {
+                    // this.name = document.querySelector("#sName").value;
+                    // this.age = document.querySelector("#sAge").value;
+                    // this.gender = document.querySelector("input[name=gender]:checked").value;
+                    this.class = document.querySelector("#sClass").value;
+                    this.marks = [];
+                    for (var i = 1; i <= 5; i++) {
+                        var temp = "#m" + i;
+                        var markValue = document.querySelector(temp).value;
+                        markValue = parseInt(markValue);
+                        this.marks.push(markValue);
+                    }
+                    // console.log(studentDetails);
+                    this.calculateTotal();
+                },
+                calculateTotal() {
+                    var sum = 0;
+                    for (var j = 0; j < this.marks.length; j++) {
+                        sum += this.marks[j];
+                    }
+                    this.total = sum;
+                    this.calulateGradeAndResult();
+                },
+                calulateGradeAndResult() {
+                    var percentage = parseInt((this.total / 500) * 100);
+                    this.result = "Passed";
+
+                    if (percentage >= 90) {
+                        this.grade = "O";
+                    } else if (percentage >= 65) {
+                        this.grade = "A";
+                    } else if (percentage >= 40) {
+                        this.grade = "B";
+                    } else {
+                        this.grade = "F";
+                        this.result = "NaN";
+                        document.querySelector("#s_result").style.color = "red";
+                    }
+                    document.querySelector("#s_result").innerHTML = this.result;
+                    document.querySelector("#s_grade").innerHTML = this.grade;
+                    document.querySelector("#s_percentage").innerHTML = percentage;
+                    console.log(percentage);
+                    this.showProgressCard();
+                },
+                showProgressCard() {
+                    document.querySelector(".resultContainer").style.display = 'block';
+                    document.querySelector(".userDetailBlock").style.display = 'none';
+                    document.querySelector("#name").innerHTML = this.name;
+                    document.querySelector("#s_class").innerHTML = this.class;
+                    // document.querySelector("#s_gender").innerHTML = this.gender;
+                    // document.querySelector("#s_age").innerHTML = this.age;
+                    for (var k = 1; k <= this.marks.length; k++) {
+                        var temp = "#marks" + k;
+                        document.querySelector(temp).innerHTML = this.marks[k - 1];
+                    }
+
+                    document.querySelector("#s_total").innerHTML = this.total;
+                }
+            };
+            studentDetails.generateReport();
+        });
+    //</script>
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->
